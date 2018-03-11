@@ -1,0 +1,61 @@
+<h2>Edit <%= @student.pretty_name %></h2>
+<form method="post" action="/students/<%= @student.id %>">
+
+
+  <div class="field-group">
+    <label for="first-name-field">First Name:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="first_name"
+      id="first-name-field"
+      value="<%= @student.first_name %>"/>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="last-name-field">Last Name:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="last_name"
+      id="last-name-field"
+      value="<%= @student.last_name %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="house_select">Select House:</label>
+
+      <select name="house_id" id="house_select" selected="<% @student.house_id %>">
+
+      <% @houses.each do |house| %>
+
+      <% if house.id == @student.house_id %>
+
+        <option value=<%= house.id %> selected><%= house.name.capitalize %></option>
+      <% else %>
+        <option value=<%= house.id %>><%= house.name.capitalize %></option>
+      <% end %>
+    <% end %>
+      </select>
+
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="age-field">Age:</label>
+    <div class="field">
+      <input type="number" name="age" id="age-field" value="<%= @student.age%>"/>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <button class="body-link">Edit Student</button>
+  </div>
+
+</form>
+<div>
+<button class="body-link" href="/students">Back to Student Records</button>
+</div>

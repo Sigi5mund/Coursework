@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RockPaperScissors</string>
+    <string name="results">Here is the results...</string>
+    <string name="instructions">Make your selection to play!</string>
+    <string name="score">0:0</string>
+
+
+</resources>

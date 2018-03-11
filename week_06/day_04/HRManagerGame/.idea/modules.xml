@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HRManagerGame.iml" filepath="$PROJECT_DIR$/.idea/modules/HRManagerGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HRManagerGame_main.iml" filepath="$PROJECT_DIR$/.idea/modules/HRManagerGame_main.iml" group="HRManagerGame" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HRManagerGame_test.iml" filepath="$PROJECT_DIR$/.idea/modules/HRManagerGame_test.iml" group="HRManagerGame" />
+    </modules>
+  </component>
+</project>

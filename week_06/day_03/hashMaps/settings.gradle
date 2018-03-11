@@ -1,0 +1,4 @@
+rootProject.name = 'day3'
+include 'hashMapDemo'
+findProject(':hashMapDemo')?.name = 'day3'
+

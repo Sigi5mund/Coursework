@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liskov_start.iml" filepath="$PROJECT_DIR$/.idea/modules/liskov_start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liskov_start_main.iml" filepath="$PROJECT_DIR$/.idea/modules/liskov_start_main.iml" group="liskov_start" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liskov_start_test.iml" filepath="$PROJECT_DIR$/.idea/modules/liskov_start_test.iml" group="liskov_start" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<h1> ::BudgetBoard:: </h1>
+
+<p>Balance:£<%= sprintf('%.2f', (@budget.balance.to_f/100)) %></p>
+
+    <br>
+<a href="/budgets/<%= @budget.id %>/edit">Edit Budget</a>
+    <br>
+<a href='/transactions'>Back to Transactions</a>

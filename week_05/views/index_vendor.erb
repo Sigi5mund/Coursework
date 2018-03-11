@@ -1,0 +1,25 @@
+<h1> ::BudgetBoard:: All Vendors</h1>
+
+<div id="transaction_table">
+  <table style="width:80%">
+    <tr>
+      <th> <a href='/vendors/new'>Add a new vendor</a></th>
+      <th> <a href='/transactions'>Spending</a></th>
+      <th></th>
+      <th></th>
+    </tr>
+  <% @vendors.each do |vendor| %>
+   <tr>
+     <td><%= StringHelper.titleize(vendor.name) %></td>
+     <td> £<%= sprintf('%.2f', (vendor.total.to_f/100)) %></td>
+     <td> <a href="/vendors/<%= vendor.id %>/edit">Edit</a> </td>
+     <td> <form action="/vendors/<%= vendor.id %>/delete" method="POST"><input class="input-button" type="submit" value="Delete"></form> </td>
+    <% end %>
+
+    </tr>
+
+ </table>
+
+ <div>
+   <h3> When deleting a vendor, please remember this will delete all transactions with this vendor. Don't delete unless you have sorted your transactions already! </h3>
+ </div>

@@ -1,0 +1,55 @@
+<form method="post" action="/pizzas/<%= @pizza.id %>">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="field-group">
+    <label for="first-name-field">First Name:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="first_name"
+      id="first-name-field"
+      value="<%= @pizza.first_name %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="last-name-field">Last Name:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="last_name"
+      id="last-name-field"
+      value="<%= @pizza.last_name %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="topping-selection" class='label'>Topping:</label>
+    <div class="field">
+
+    <select name="topping_id"> id="topping_selection">
+      <% @toppings.each do |topping| %>
+      <option value=<%= topping.id %> <%= "selected" if @pizza.topping_id == topping.id%>>
+
+
+      <%= topping.topping_type %></option>
+      <% end %>
+    </select>
+
+
+  <div class="field-group">
+    <label for="quantity-field">Quantity:</label>
+    <div class="field">
+      <input
+      type="number"
+      name="quantity"
+      id="quantity-field"
+      value="<%= @pizza.quantity() %>"
+      />
+    </div>
+  </div>
+
+  <button class="button big-button">Update Pizza</button>
+</form>

@@ -1,0 +1,23 @@
+<h1> ::BudgetBoard:: Editing Category</h1>
+<form method="POST" action="/tags/<%= @tag.id %>">
+  <input type="hidden" name="_method" value="put">
+  <div class="form">
+
+
+    <div class="form">
+      <label for="category">Category:</label>
+      <input type="text" name="category" id="category"
+      value="<%= @tag.category %>"/>
+    </div>
+  <br>
+
+    <div class="form">
+      <input class="input-button" type="submit" value=" Save Catagory"/>
+    </div>
+    <br>
+  </div>
+</form>
+
+  <br>
+
+<a href='/transactions'>Back to Transactions</a>

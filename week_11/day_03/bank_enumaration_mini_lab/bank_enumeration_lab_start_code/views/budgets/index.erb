@@ -1,0 +1,26 @@
+<h1> ::BudgetBoard:: Budget</h1>
+
+<h3> Ready to start a new budget goal? Simply edit the budget to fit your new goals and we can start adding transactions straight away! </h3>
+
+<div id="transaction_table">
+  <table style="width: 50%">
+    <tr>
+      <th> Name</th>
+      <th></th>
+    </tr>
+  <% @balance.each do |budget| %>
+   <tr>
+     <td> £<%= sprintf('%.2f', (budget.balance.to_f/100)) %></td>
+     <td> <a href="/budgets/<%= budget.id %>/edit">Edit</a> </td>
+    <% end %>
+   </tr>
+ </table>
+
+  <br>
+
+<a href='/transactions/new'>Add New Transaction</a>
+
+  <br>
+  <br>
+
+<a href='/transactions'>Transactions</a>

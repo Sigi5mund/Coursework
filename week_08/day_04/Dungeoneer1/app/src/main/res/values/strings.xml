@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dungeoneer1</string>
+    <string name="say_hello">Say Hello</string>
+    <string name="menu_toast_hello">Hello Toast!</string>
+    <string name="say_bye">Say Bye!</string>
+    <string name="menu_toast_bye">Bye Toast!</string>
+</resources>

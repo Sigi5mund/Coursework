@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WordCountChecker</string>
+    <string name="searchBox">Enter your text here:</string>
+    <string name="output">Your results will appear here</string>
+    <string name="answer_activity_title">the number of words is...</string>
+
+</resources>

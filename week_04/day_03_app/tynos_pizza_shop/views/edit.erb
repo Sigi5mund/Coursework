@@ -1,0 +1,54 @@
+<form method="post" action="/pizzas/<%= @pizza.id %>">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="field-group">
+    <label for="first-name-field">First Name:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="first_name"
+      id="first-name-field"
+      value="<%= @pizza.first_name %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="last-name-field">Last Name:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="last_name"
+      id="last-name-field"
+      value="<%= @pizza.last_name %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="pizza-selection">Select a pizza:</label>
+    <div class="field">
+
+      <select name="topping" id="pizza-selection">
+        <option value="Margherita" <%= "selected" if @pizza.topping == "Margherita" %> >Margherita</option>
+        <option value="Calzone" <%= "selected" if @pizza.topping == "Calzone" %> >Calzone</option>
+        <option value="Pepperoni" <%= "selected" if @pizza.topping == "Pepperoni" %> >Pepperoni</option>
+        <option value="Italian Sausage" <%= "selected" if @pizza.topping == "Italian Sausage" %> >Italian Sausage</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="quantity-field">Quantity:</label>
+    <div class="field">
+      <input
+      type="number"
+      name="quantity"
+      id="quantity-field"
+      value="<%= @pizza.quantity() %>"
+      />
+    </div>
+  </div>
+
+  <button class="button big-button">Edit Pizza</button>
+</form>

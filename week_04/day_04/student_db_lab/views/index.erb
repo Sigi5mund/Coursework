@@ -1,0 +1,6 @@
+<% @students.each do |student| %>
+  <div class="order-list">
+    <p>Name: <%= student.pretty_name() +" " %><a class="body-link" href="/students/<%= student.id %>">Show Info</a></p>
+  </div>
+<% end %>
+<a class="body-link" href="/students/new">Register a new student</a>

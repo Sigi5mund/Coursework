@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dependancy_inversion.iml" filepath="$PROJECT_DIR$/.idea/modules/dependancy_inversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dependancy_inversion_main.iml" filepath="$PROJECT_DIR$/.idea/modules/dependancy_inversion_main.iml" group="dependancy_inversion" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dependancy_inversion_test.iml" filepath="$PROJECT_DIR$/.idea/modules/dependancy_inversion_test.iml" group="dependancy_inversion" />
+    </modules>
+  </component>
+</project>

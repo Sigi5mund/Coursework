@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.andrew.dungeoneer">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Main1Activity"
+            android:label="DUNGEONEER">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main2ActivityHealer"
+            android:label="HEALER"
+            android:parentActivityName=".Main1Activity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Main3ActivityTank"
+            android:label="TANK"
+            android:parentActivityName=".Main2ActivityHealer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Main4ActivityDPS"
+            android:label="DPS"
+            android:parentActivityName=".Main3ActivityTank"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Main5ActivitySummary"
+            android:label="Summary"
+            android:parentActivityName=".Main4ActivityDPS"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+
+</manifest>

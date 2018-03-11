@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andrew.dungeoneer.Main3ActivityHealer"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/action1DPS"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="onAction1DPS"
+        android:text="FireBall"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/action4DPS"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="onAction4DPS"
+        android:text="Melt"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/action2DPS"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="onAction2DPS"
+        android:text="AOE"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/action1DPS" />
+
+    <Button
+        android:id="@+id/action3DPS"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="onAction3DPS"
+        android:text="DOTAOE"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/action4DPS" />
+
+    <TextView
+        android:id="@+id/manaView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/mana"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/action1ManaView"
+        app:layout_constraintStart_toEndOf="@+id/imageView6" />
+
+    <ListView
+        android:id="@+id/dpsList"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:listSelector="@android:color/holo_red_light"
+        android:longClickable="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="192dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="116dp"
+        android:backgroundTint="@android:color/background_light"
+        android:text="DPS"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/action1ManaView"
+        android:layout_width="96dp"
+        android:layout_height="20dp"
+        android:text="manacost"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/action1DPS"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/action2ManaView"
+        android:layout_width="96dp"
+        android:layout_height="20dp"
+        android:text="manacost"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/action2DPS"
+        app:layout_constraintStart_toEndOf="@+id/action1ManaView" />
+
+    <TextView
+        android:id="@+id/action3ManaView"
+        android:layout_width="96dp"
+        android:layout_height="20dp"
+        android:text="manacost"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/action3DPS"
+        app:layout_constraintEnd_toStartOf="@+id/action4ManaView" />
+
+    <TextView
+        android:id="@+id/action4ManaView"
+        android:layout_width="96dp"
+        android:layout_height="20dp"
+        android:text="manacost"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/action4DPS"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:text="Basic attack, high threat"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:text="Hits all enemies, high threat"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:text="Slow damage, low threat"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:text="Damages armour, very high threat"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/endTurnButton"
+        android:layout_width="96dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="onSkipButtonClick"
+        android:text="skip turn"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/action4ManaView"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/action1ManaView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/manaicon1111" />
+
+</android.support.constraint.ConstraintLayout>

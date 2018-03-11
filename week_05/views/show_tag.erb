@@ -1,0 +1,10 @@
+<h1> ::BudgetBoard:: </h1>
+
+<p>Category: <%= @tag.category %></p>
+
+    <br>
+<a href="/tags/<%= @tag.id %>/edit">Edit Category</a>
+    <br>
+<form action="/tags/<%= @tag.id %>/delete" method="POST"><input class="input-button" type="submit" value="Delete"></form>
+    <br>
+<a href='/transactions/'>Back to Transactions</a>

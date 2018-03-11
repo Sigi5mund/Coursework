@@ -1,0 +1,59 @@
+<form action="/students" method="post" >
+
+  <div class="field-group">
+    <label for="first-name-field" class="label">First Name:</label>
+    <div class="field">
+      <input
+        type="text"
+        name="first_name"
+        id="first-name-field"
+        placeholder="First name"
+        required
+      />
+   </div>
+  </div>
+
+  <div class="field-group">
+    <label for="last-name-field" class="label">Last Name:</label>
+    <div class="field">
+      <input
+        type="text"
+        name="last_name"
+        id="last-name-field"
+        placeholder="Last name"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="house_select" class="label"> Select House</label>
+    <div class="field">
+
+      <select name="house_id" id="house_select">
+      <% @houses.each do |house| %>
+       <option value=<%= house.id%>><%= house.name.capitalize %> </option>
+       <% end %>
+     </select>
+    </div>
+  </div>
+
+
+  <div class="field-group">
+    <label for="age-field" class="label"> Age </label>
+    <div class="field">
+      <input
+        type="number"
+        name="age"
+        id="age-field"
+        placeholder="Age of student"
+        required
+      />
+    </div>
+  </div>
+
+  <a class="body-link">
+   <input type="submit" value="Save Student"/></a>
+
+  </div>
+<a class="body-link" href="/students">Back to Student Records</a>

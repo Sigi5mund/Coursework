@@ -1,0 +1,19 @@
+{
+  "name": "front_end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "webpack -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mocha": "^5.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}

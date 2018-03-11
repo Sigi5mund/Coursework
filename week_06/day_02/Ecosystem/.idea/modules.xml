@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ecosystem.iml" filepath="$PROJECT_DIR$/.idea/modules/Ecosystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ecosystem_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ecosystem_main.iml" group="Ecosystem" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ecosystem_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ecosystem_test.iml" group="Ecosystem" />
+    </modules>
+  </component>
+</project>

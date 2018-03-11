@@ -1,0 +1,21 @@
+<h1> ::BudgetBoard:: Editing Vendor</h1>
+<form method="POST" action="/vendors/<%= @vendor.id %>">
+  <input type="hidden" name="_method" value="put">
+  <div class="form">
+
+
+    <div class="form">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name"
+      value="<%= @vendor.name %>"/>
+    </div>
+    <br>
+
+   <div class="form">
+     <input class="input-button" type="submit" value="Save Vendor"/>
+  </div>
+
+</div>
+</form>
+<br>
+<a href='/transactions'>Transactions</a>

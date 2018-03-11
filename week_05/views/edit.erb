@@ -1,0 +1,60 @@
+<h1> ::BudgetBoard:: Editing Transaction</h1>
+<form method="POST" action="/transactions/<%= @transaction.id %>">
+  <input type="hidden" name="_method" value="put">
+  <div class="form">
+
+
+    <div class="form-el">
+      <label for="name">Description:</label>
+      <input required type="text" name="name" id="name"
+      value="<%= @transaction.name %>"/>
+    </div>
+
+    <br>
+
+    <div class="form-el">
+      <label required for="price">Price: £</label>
+      <input type="number" name="price" id="price" value="<%= sprintf('%.2f', (@transaction.price.to_f/100))%>"/>
+    </div>
+
+    <br>
+
+    <div class="form-el">
+      <label for="vendor_id">Vendor:</label>
+      <select name="vendor_id" id="vendor_id" required >
+        <% @vendors.each do |vendor| %>
+          <option value=<%= vendor.id %> <%= "selected" if vendor.id == @transaction.vendor_id %>><%= vendor.name.capitalize %></option>
+        <% end %>
+      </select>
+      <a href='/vendors/new'>Add</a>
+    </div>
+    <br>
+
+    <div class="form-el">
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" value="<%= @transaction.date %>" required/>
+    </div>
+    <br>
+    <div class="form-el">
+      <label for="tag_id">Category:</label>
+      <select name="tag_id" id="tag_id" required>
+        <% @tags.each do |tag| %>
+        <option value=<%= tag.id %> <%= "selected" if tag.id == @transaction.tag_id %>><%= tag.category.capitalize %></option>
+        <% end %>
+      </select>
+      <a href='/tags/new'>Add</a>
+    </div>
+    <br>
+    <div class="form-el">
+      <label for="comment">Comments:</label>
+      <input type="text" name="comment" id="comment" value="<%= @transaction.comment %>"/>
+    </div>
+<br>
+<div class= "form-el" >
+  <input class="input-button" type="submit" value="Upload Transaction"/>
+</div>
+
+</div>
+</form>
+<br>
+<a href='/transactions'>Back to Transactions</a>
